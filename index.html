@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <audio src="" type="audio/mp3" id="audio" autoplay="autoplay" loop="loop" controls></audio>
+        <audio src="" type="audio/mp3" id="audio-click"></audio>
+        <audio src="" type="audio/mp3" id="audio-click-bomb"></audio>
+        <audio src="" type="audio/mp3" id="audio-impossible"></audio>
+
+        <img id="loadingGif" src="" alt="">
+
+
+        <div onclick="playSound()">
+            <p id="begin-btn" onclick="loadingPage()"></p>
+        </div>
+        <div class="container-loading" style="display:none;">
+            <div class="barLoading" id="bar-loading"></div>
+        </div>
+
+
+        <div id="container-menu" style="display:none;">
+            <div id="firstcard-menu" class="btn-menu" onclick="gameEasy()">
+                <img id="toPlay-image" src="" alt="">
+                <p id="toPlay"></p>
+            </div>
+            <div id="secondcard-menu" class="btn-menu" onclick='menuAdjust()'>
+                <img id="toAdjust-image" src="" alt="">
+                <p id="toAdjust"></p>
+            </div>
+            <div id="thirdcard-menu" class="btn-menu" onclick='exitMenu()'>
+                <img id="toExit-image" src="" alt="">
+                <p id="toExit"></p>
+            </div>
+
+            <img id="toBack" src="" alt="" onclick="backPage()">
+            <div id="btn-volume-container" class="btn-menuTwo" style="display:none;">
+                <div id="btn-volume">
+                    <img id="toVolume-image" src="" alt="" onclick="noVolume()">
+                    <p id="toVolume"></p>
+                </div>
+                <div>
+                    <input onchange="volumeAdjust()" type="range" min="0" max="100" value="100" class="slider" id="volumeSlider">
+                </div>
+            </div>
+            <div id="title-toChallenge" class="btn-menuTwo" style="display:none;">
+                <p id="toChallenge"></p>
+            </div>
+            <div class="btn-menuTwo" id="btn-challenge-container" style="display:none;">
+                <div class="btn-challenge-card">
+                    <div class="challenge-container-btn" onclick="gameEasy()">
+                        <img class="toChallenge-image" src="" alt="">
+                        <p id="challengeOne"></p>
+                    </div>
+                    <div class="challenge-container-btn" onclick="gameMacho()">
+                        <img class="toChallenge-image" src="" alt="">
+                        <p id="challengeTwo"></p>
+                    </div>
+                </div>
+                <div class="btn-challenge-card">
+                    <div class="challenge-container-btn" onclick="gameSpicy()">
+                        <img class="toChallenge-image" src="" alt="">
+                        <p id="challengeThree"></p>
+                    </div>
+                    <div class="challenge-container-btn" onclick="gameImpossible()">
+                        <img class="toChallenge-image" src="" alt="">
+                        <p id="challengeFour"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="level-title"></p>
+        <p id="score"></p>
+        <img id="close-page" onclick="closePages()" src="" alt="">
+        <img id="clown-gif" onclick="scoreInc()" src="" alt="">
+        <img id="bomb-gif" onclick="scoreDec()" src="" alt="">
+        <img id="congrat-gif" src="" alt="">
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
